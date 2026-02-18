@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: phi3-vllm
+  namespace: tax-ai
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: phi3-vllm
+  template:
+    metadata:
+      labels:
+        app: phi3-vllm
+    spec:
+      containers:
+      - name: phi3-vllm
+        image: vllm/vllm-openai:v0.5.5
+        imagePullPolicy: IfNotPresent
+        command: ["python3", "-m", "http.server"]
+        args: ["8000"]
+        ports:
+        - containerPort: 8000
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "256Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: phi3-vllm
+  namespace: tax-ai
+spec:
+  selector:
+    app: phi3-vllm
+  ports:
+  - port: 8000
+    targetPort: 8000
