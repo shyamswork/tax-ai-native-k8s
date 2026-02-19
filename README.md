@@ -42,6 +42,7 @@ To solve below challenges for tax analytics platform and the possible solution t
 | **Complexity**  | Rule explosion                | **Dynamic Phi-3/Legacy routing** |
 
 **Business Impact**: P99 <1s latency, 92% cost savings, seamless migration path.
+```markdown
 
 ## 🏗️ AI-Native Architecture
 ```mermaid
