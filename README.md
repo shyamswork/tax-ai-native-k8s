@@ -43,23 +43,9 @@ To solve below challenges for tax analytics platform and the possible solution t
 
 
 ## 🏗️ AI-Native Architecture
-```mermaid
-graph TB
-    Client[Client /ai-tax] -->|complexity=low| TaxAPI[tax-api<br/>FastAPI]
-    Client -->|complexity=high<br/>amount>2M<br/>jurisdictions>2| TaxAPI
-    
-    TaxAPI -->|Phi-3 Path| Phi3VLLM[<br/>Phi-3 vLLM<br/>dialoGPT-medium]
-    TaxAPI -->|Legacy Path| LegacyMonolith[Legacy Engine<br/>6s Simulation]
-    
-    TaxAPI --> Cache[Redis<br/>tax-ai namespace]
-    
-    subgraph K8s ["3-Node kind Cluster"]
-        TaxAPI
-        Phi3VLLM
-        Cache
-    end
-    
-    HPA[HPA 50% CPU] -.-> TaxAPI
+<img width="820" height="522" alt="image" src="https://github.com/user-attachments/assets/b14047e7-689e-4f2e-926b-f56e919ea535" />
+
+
 
 
 
