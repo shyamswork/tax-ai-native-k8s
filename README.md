@@ -43,6 +43,26 @@ To solve below challenges for tax analytics platform and the possible solution t
 
 **Business Impact**: P99 <1s latency, 92% cost savings, seamless migration path.
 
+## 🏗️ AI-Native Architecture
+```mermaid
+graph TB
+    Client[Client /ai-tax] -->|complexity=low| TaxAPI[tax-api<br/>FastAPI]
+    Client -->|complexity=high<br/>amount>2M<br/>jurisdictions>2| TaxAPI
+    
+    TaxAPI -->|Phi-3 Path| Phi3VLLM[<br/>Phi-3 vLLM<br/>dialoGPT-medium]
+    TaxAPI -->|Legacy Path| LegacyMonolith[Legacy Engine<br/>6s Simulation]
+    
+    TaxAPI --> Cache[Redis<br/>tax-ai namespace]
+    
+    subgraph K8s ["3-Node kind Cluster"]
+        TaxAPI
+        Phi3VLLM
+        Cache
+    end
+    
+    HPA[HPA 50% CPU] -.-> TaxAPI
+```
+
 
 ## 🚀 **Quick Start (5 Minutes)**
 
