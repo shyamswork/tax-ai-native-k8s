@@ -43,7 +43,13 @@ To solve below challenges for tax analytics platform and the possible solution t
 
 
 ## 🏗️ AI-Native Architecture
-<img width="820" height="522" alt="image" src="https://github.com/user-attachments/assets/b14047e7-689e-4f2e-926b-f56e919ea535" />
+<img width="906" height="482" alt="image" src="https://github.com/user-attachments/assets/f737e04e-2fc5-44cd-acb4-b581ab53d84c" />
+
+
+
+
+
+
 
 
 
