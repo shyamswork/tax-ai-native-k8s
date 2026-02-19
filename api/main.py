@@ -44,7 +44,7 @@ async def ai_tax_native(request: TaxRequest):
     
     if is_complex:
         # ROUTE TO LEGACY ENGINE
-        result = await legacy_tax_calc(request)
+        result = await gpt_fallback(request)
         latency = (time.perf_counter() - start) * 1000
         r.incr("legacy_calls")
         return {
