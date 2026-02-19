@@ -83,5 +83,30 @@ Invoke-RestMethod -Uri "http://localhost:8080/ai-tax" -Method Post -Body $comple
 
 ```
 
+## 🏗️ Container pods running
+
+<img width="1845" height="749" alt="image" src="https://github.com/user-attachments/assets/316e9191-cf3f-4021-af85-fda8f42ae9e9" />
+
+
+
+
+
+
+
+## 🏗️ Processing simple prompts example
+
+
+<img width="1868" height="1066" alt="image" src="https://github.com/user-attachments/assets/00c73fa4-da64-4194-8fe7-9bdd371e5834" />
+
+
+
+
+
+
+
+
+## 🏗️ Processing complex prompts example
+
+<img width="1768" height="1038" alt="image" src="https://github.com/user-attachments/assets/19680060-f2e5-402c-92a9-2307247b6c85" />
 
 
