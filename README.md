@@ -43,6 +43,7 @@ To solve below challenges for tax analytics platform and the possible solution t
 
 **Business Impact**: P99 <1s latency, 92% cost savings, seamless migration path.
 
+
 ## 🚀 **Quick Start (5 Minutes)**
 
 ### **Prerequisites**
