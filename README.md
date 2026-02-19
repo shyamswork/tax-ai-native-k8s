@@ -1,6 +1,4 @@
 
-
-```markdown
 # Tax AI Native Platform 🚀
 
 To solve below challenges for tax analytics platform and the possible solution to the problem .
@@ -42,7 +40,7 @@ To solve below challenges for tax analytics platform and the possible solution t
 | **Complexity**  | Rule explosion                | **Dynamic Phi-3/Legacy routing** |
 
 **Business Impact**: P99 <1s latency, 92% cost savings, seamless migration path.
-```markdown
+
 
 ## 🏗️ AI-Native Architecture
 ```mermaid
@@ -62,7 +60,7 @@ graph TB
     end
     
     HPA[HPA 50% CPU] -.-> TaxAPI
-```
+
 
 
 ## 🚀 **Quick Start (5 Minutes)**
